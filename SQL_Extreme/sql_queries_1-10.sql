@@ -13,14 +13,20 @@
 --COUNT(Orders.EmployeeID)
 
 --5
---SELECT OrderId, OrderDate 
---FROM Orders, Employees 
---WHERE Orders.employeeId = Employees.employeeId AND Employees.employeeId = 5 ;
+--SELECT OrderID, OrderDate
+--FROM Orders
+--WHERE EmployeeID=5
 
 --6
 -- SELECT SupplierID, ContactName, ContactTitle
 -- FROM Suppliers
--- WHERE Suppliers.ContactTitle != 'Marketing Manager'
+-- WHERE ContactTitle != 'Marketing Manager'
+
+--OR
+
+--SELECT SupplierID, ContactName, ContactTitle
+--FROM Suppliers
+--WHERE NOT ContactTitle='Marketing Manager'
 
 --7
 -- SELECT ProductID, ProductName
