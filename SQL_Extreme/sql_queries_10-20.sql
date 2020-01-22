@@ -23,3 +23,9 @@
 --15
 -- SELECT MIN(OrderDate) AS FirstOrder
 -- FROM Orders
+
+--16
+-- SELECT Country
+-- FROM Customers
+-- GROUP BY Country
+
