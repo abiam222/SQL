@@ -69,3 +69,43 @@
 --GROUP BY Categories.CategoryName
 --ORDER BY TotalProducts DESC 
 
+--21
+-- SELECT Country, City, TotalCustomers = Count(*)
+-- FROM Customers
+-- GROUP BY Country, City
+-- Order BY Count(*) DESC 
+
+--OR
+
+-- SELECT Country, City, COUNT(*) AS TotalCustomers
+-- FROM Customers
+-- GROUP BY Country, City 
+-- ORDER BY TotalCustomers DESC 
+
+
+--22 
+-- SELECT ProductID, ProductName, UnitsInStock, ReorderLevel 
+-- FROM Products
+-- WHERE UnitsInStock <= ReorderLevel 
+
+--23
+-- SELECT ProductID, ProductName, UnitsInStock, ReorderLevel, Discontinued
+-- FROM Products
+-- WHERE UnitsInStock+UnitsOnORder <= ReorderLevel AND Discontinued=0
+
+--24
+--SELECT CustomerID, CompanyName, Region,
+--    RegionOrder = Case WHEN Region is null then 1 else 0 END
+--FROM Customers
+--ORDER BY RegionOrder, Region, CustomerID
+--Order by RegionOrder first then Region then CustomerID last 
+
+--25
+--1.Get every country and order by that country (so you will have 1 row for each country)
+--2. Now when you do AVG you will get the average of each country (since its grouped by country)
+--Ordrer by what yo need and want
+-- SELECT TOP 3 ShipCountry, AVG(Freight) AS AverageFreight 
+-- FROM Orders
+-- GROUP BY ShipCountry
+-- ORDER BY AverageFreight DESC
+
