@@ -116,3 +116,17 @@
 -- GROUP BY ShipCountry
 -- ORDER BY AverageFreight DESC
 
+
+--27 & 28
+
+
+--29
+-- SELECT Orders.EmployeeID, Employees.LastName, Orders.OrderID, Products.ProductName, OrderDetails.Quantity
+-- FROM Orders
+-- INNER JOIN Employees ON Employees.EmployeeID=Orders.EmployeeID
+-- INNER JOIN OrderDetails ON Orders.OrderID = OrderDetails.OrderID
+-- INNER JOIN Products ON Products.ProductID = OrderDetails.ProductID
+-- ORDER BY Orders.OrderID, Products.ProductID
+
+--They are functionally equivalent, but INNER JOIN can be a bit clearer to read, especially if the query has other join types (i.e. LEFT or RIGHT or CROSS) included in it.
+--INNER JOIN same as JOIN
